@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{playlist.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-img [src]="playlist.images[0].url"> </ion-img>
+<div *ngFor="let item of playlistTracks?.items">
+</div>
+<iframe *ngFor="let item of playlistTracks?.items" [src]="validateUrl(item.track.uri)" frameborsrcder="0" allowtransparency="true" allow="encrypted-media;picture-in-picture;clipboard-write"> </iframe>
+</ion-content>

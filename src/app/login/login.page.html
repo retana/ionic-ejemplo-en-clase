@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="login()"  [formGroup]="credentials">
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder="Correo" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item  fill="solid" class="ion-margin-bottom">
+      <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+    </ion-item>
+    
+    <ion-button type="submit" color="secondary" expand="block">Ingresar</ion-button>
+    <ion-button type="button" color="primary" expand="block" (click)="createAccount()">Crear Cuenta</ion-button>
+  </form>
+</ion-content>

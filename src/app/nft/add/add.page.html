@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nuevo NFT</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item  fill="solid" class="ion-margin-bottom">
+  <ion-input type="text" placeholder="Nombre" [(ngModel)]="document.nombre"></ion-input>  
+  </ion-item>
+  <ion-item  fill="solid" class="ion-margin-bottom">
+    <ion-textarea placeholder="Descripción" [(ngModel)]="document.descripcion"></ion-textarea>  
+  </ion-item>
+  <ion-item  fill="solid" class="ion-margin-bottom">
+    <ion-input type="number" placeholder="Precio" [(ngModel)]="document.precio"></ion-input>  
+  </ion-item>
+  <ion-button expand="block" (click)="saveNFT()">Guardar</ion-button>
+
+  {{document | json}}
+</ion-content>
